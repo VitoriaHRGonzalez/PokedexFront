@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 
-
 const express = require('express');
 
 const { resolve } = require('path');
@@ -11,12 +10,12 @@ app.use('/',
     express.static(
         resolve(
             __dirname,
-            './dist'
+            '.dist'
          )
         )
 );
 
-app.listen(process.env.PORT || 8080, (err) => {
+app.listen(process.env.PORT || 3000, (err) => {
     if(err) {
         console.error('Error starting server:', err);
         return;
