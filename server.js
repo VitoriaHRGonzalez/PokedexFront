@@ -16,7 +16,7 @@ app.use('/',
         )
 );
 
-app.listen(process.env.PORT || 3000, (err) => {
+app.listen(process.env.PORT || 8080, (err) => {
     if(err) {
         console.error('Error starting server:', err);
         return;
