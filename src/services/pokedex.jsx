@@ -23,7 +23,6 @@
 //       };
 //     })
 //   );
-//   return payload;
 // };
 
 // const getPokemonAttributes = async(url) => {
