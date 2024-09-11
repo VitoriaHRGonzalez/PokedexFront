@@ -13,7 +13,7 @@
   "dependencies": {
     "@mui/material": "^5.15.14",
     "animejs": "^3.2.2",
-    "axios": "^0.24.8",
+    "axios": "^1.6.8",
     "express": "^5.0.0",
     "mongodb": "^6.8.0",
     "pokedexteste": "file:",
