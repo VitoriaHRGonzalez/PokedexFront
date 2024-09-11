@@ -1,4 +1,4 @@
-export const baseURL = process.env.REACT_APP_API_URL;
+export const baseURL = 'http://localhost:8080/api';
 const ImageBaseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
 
 export const getAllPokemons = async(options = {}) => {
