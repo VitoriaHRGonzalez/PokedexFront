@@ -1,4 +1,4 @@
-export const baseURL = process.env.REACT_APP_API_URL;
+export const baseURL = 'https://pokedexbackend-2c9bfccb0af0.herokuapp.com/api';
 const ImageBaseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
 
 // Tirei o Api da URL no Heroku
