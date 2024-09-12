@@ -5,7 +5,7 @@ const ImageBaseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/s
 
 export const getAllPokemons = async(options = {}) => {
   try {
-    const response = await fetch(`${baseURL}/pokemon`, options);
+    const response = await fetch(`${baseURL}/api/pokemon`, options);
     if (!response.ok) {
       throw new Error('Failed to fetch Pokémon');
     }
@@ -55,7 +55,7 @@ export const getPokemonImageUrl = (id) => {
 
 export const getAllTrainers = async(options = {}) => {
   try {
-    const response = await fetch(`${baseURL}/trainer`, options);
+    const response = await fetch(`${baseURL}/api/trainer`, options);
     if (!response.ok) {
       throw new Error('Failed to fetch trainers');
     }
