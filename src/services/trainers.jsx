@@ -3,9 +3,11 @@ const ImageBaseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/s
 
 // Tirei o Api da URL no Heroku
 
+console.log('baseURL', baseURL)
+
 export const getAllPokemons = async(options = {}) => {
   try {
-    const response = await fetch(`${baseURL}/api/pokemon`, options);
+    const response = await fetch(`${baseURL}/pokemon`, options);
     if (!response.ok) {
       throw new Error('Failed to fetch Pokémon');
     }
@@ -55,7 +57,7 @@ export const getPokemonImageUrl = (id) => {
 
 export const getAllTrainers = async(options = {}) => {
   try {
-    const response = await fetch(`${baseURL}/api/trainer`, options);
+    const response = await fetch(`${baseURL}/trainer`, options);
     if (!response.ok) {
       throw new Error('Failed to fetch trainers');
     }
