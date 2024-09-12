@@ -1,7 +1,7 @@
 export const baseURL = process.env.REACT_APP_API_URL;
 const ImageBaseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
 
-// Se não for, tirar o 'api' da URL no Heroku
+// Tirei o Api da URL no Heroku
 
 export const getAllPokemons = async(options = {}) => {
   try {
