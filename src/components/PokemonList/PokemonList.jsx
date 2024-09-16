@@ -46,7 +46,7 @@ const PokemonList = ({ pokemonIds, onPokemonClick }) => {
   }
 
   return (
-    <div className='container'>
+    <div className='containerPokemonlist'>
       {pokemonList && pokemonList.map((pokemon) => (
         <div className="pokemon-card" key={pokemon.id} onClick={() => {
           onPokemonClick(pokemon);
