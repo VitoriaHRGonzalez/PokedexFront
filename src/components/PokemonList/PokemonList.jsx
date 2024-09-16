@@ -48,7 +48,7 @@ const PokemonList = ({ pokemonIds, onPokemonClick }) => {
   return (
     <div className='containerPokemonlist'>
       {pokemonList && pokemonList.map((pokemon) => (
-        <div className="pokemon-card" key={pokemon.id} onClick={() => {
+        <div className="pokemon-card" key={pokemon.id} data-cy={`pokemon-${pokemon.id}`} onClick={() => {
           onPokemonClick(pokemon);
         }}>
           <p className="pokemon-id">#{FormatoId(pokemon.id)}</p>
