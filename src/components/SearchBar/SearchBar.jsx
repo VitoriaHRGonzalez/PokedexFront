@@ -5,7 +5,7 @@ import vector from '../../assets/icons/vector.svg';
 import './SearchBar.css';
 
 // eslint-disable-next-line react/prop-types
-const SearchBar = ({ onSearch, onOptionChange, data }) => {
+const SearchBar = ({ onSearch, onOptionChange }) => {
   const [searchInput, setSearchInput] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,16 +43,15 @@ const SearchBar = ({ onSearch, onOptionChange, data }) => {
           value={searchInput}
           onChange={handleChange} />
       </div>
-
-      {isModalOpen && (
-        <div className="background-blur" onClick={fecharModal}></div>
-      )}
-      <div className="modal-container">
-        <button onClick={abrirModal} className="search-button">
+      <button onClick={abrirModal} className="search-button">
           <img src={tag} alt="Tag Icon" />
         </button>
+      {isModalOpen && (
+        <div className="background-blur" onClick={fecharModal} />
+      )}
+      {isModalOpen && <div className="modal-container">
         <div className={`modal ${isModalOpen ? '' : 'hidden'}`}>
-          <h4>Sort by:</h4>
+          <h4>Ordena por:</h4>
           <div className="modal-content">
             <div className="modal-options">
               <label>
@@ -62,7 +61,7 @@ const SearchBar = ({ onSearch, onOptionChange, data }) => {
                   checked={selectedOption === 'option1'}
                   onChange={handleOptionChange}
                   className="modal-radio" />
-                Number
+                Número
               </label>
               <label>
                 <input
@@ -71,12 +70,12 @@ const SearchBar = ({ onSearch, onOptionChange, data }) => {
                   checked={selectedOption === 'option2'}
                   onChange={handleOptionChange}
                   className="modal-radio" />
-                Name
+                Nome
               </label>
             </div>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
     </>
   );

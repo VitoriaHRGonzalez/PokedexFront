@@ -1,9 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { TrainerContext } from '../contexts/TrainerContext';
 
-export default function FilteredPokemons({availablePokemons, searchTerm, sortOption}) {
+
+
+export default function useFilteredPokemons({searchTerm, sortOption, trainerId}) {
   const [filteredPokemons, setFilteredPokemons] = useState([]);
 
-  console.log('availablePokemons:', availablePokemons);
+  const allTrainers = useContext(TrainerContext);
+  const selectedTrainer = allTrainers.data.find(t => t.id === trainerId)|| {};
+  const availablePokemons = selectedTrainer?.pokemons || [];
+
+  
 
   useEffect(() => {
     if(availablePokemons) {
